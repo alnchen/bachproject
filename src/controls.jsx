@@ -41,7 +41,7 @@ export default class Controls extends React.Component {
             <span id="equals-hidden">
               =
             </span>
-            <span onClick={() => this.toggleTab('other')}>
+            <span onClick={() => this.toggleTab('')}>
               <img id="photos-hidden" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
             </span>
           </div>
