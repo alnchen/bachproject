@@ -16,22 +16,31 @@ export default class Controls extends React.Component {
       return (
         <div id="controls">
           <div onClick={() => this.toggleTab('schedule')}>
-            <img id="trips" src="https://res.cloudinary.com/ac31624/image/upload/v1561969187/jon_bache/trips.png" />
+            <img className="click-animation" id="trips" src="https://res.cloudinary.com/ac31624/image/upload/v1561969187/jon_bache/trips.png" />
           </div>
           <div id='midsection'>
             <span onClick={() => this.toggleTab('photos')}>
-              <img id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
+              <img className="click-animation" id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
             </span>
             <span id="equals">
               =
             </span>
             <span onClick={() => this.toggleTab('other')}>
-              <img id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
+              <img className="click-animation" id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
             </span>
           </div>
-          <span onClick={() => this.toggleTab('video')}>
-            <img id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
-          </span>
+
+          <div id='midsection'>
+            <span onClick={() => this.toggleTab('video')}>
+              <img className="click-animation" id="photos" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
+            </span>
+            <span id="equals-hidden">
+              =
+            </span>
+            <span onClick={() => this.toggleTab('other')}>
+              <img id="photos-hidden" src="https://res.cloudinary.com/ac31624/image/upload/v1561969188/jon_bache/test.png" />
+            </span>
+          </div>
         </div>
       );
     }

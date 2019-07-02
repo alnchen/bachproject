@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Controls from './controls';
 import MediaQuery from 'react-responsive';
+import Modal from 'react-awesome-modal';
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -42,27 +43,71 @@ export default class Main extends React.Component {
         displayTab: section
       })
     }
+
+    closeModal() {
+      this.setState({
+        displayTab: null
+      })
+    }
   
     render() {
       const { pageUnlocked, displayTab } = this.state;
 
       return (
         <div>
+          <div id="header"><img id="header-image" src="https://res.cloudinary.com/ac31624/image/upload/c_limit,h_567,w_1572/v1562033102/jon_bache/vegas_sign.png" /></div>
           <MediaQuery minDeviceWidth={1224}>
             desktop mode
           </MediaQuery>
           <MediaQuery maxDeviceWidth={1224}>
             {pageUnlocked && 
               <div id='mainpage'>
-                <div id="header"><img id="header-image" src="https://res.cloudinary.com/ac31624/image/upload/v1561971783/jon_bache/vegas_sign.png" /></div>
                 <Controls toggleDisplay={this.expandSection} />
-                <span>
-                  {displayTab && displayTab === 'schedule' && 
-                    <span>
-                      controls
-                    </span>
+
+                <Modal 
+                  visible={this.state.displayTab && this.state.displayTab === 'schedule'}
+                  width="100%"
+                  height="80%"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+                >
+                  SCHEDULE HERE
+                </Modal>
+
+                <Modal 
+                  visible={this.state.displayTab && this.state.displayTab === 'photos'}
+                  width="100%"
+                  height="80%"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+                >
+                  PHOTOS HERE
+                </Modal>
+
+                <Modal 
+                  visible={this.state.displayTab && this.state.displayTab === 'other'}
+                  width="100%"
+                  height="80%"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+                >
+                  OTHER HERE
+                </Modal>
+
+                <Modal 
+                  visible={this.state.displayTab && this.state.displayTab === 'video'}
+                  width="100%"
+                  height="80%"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+                >
+                  {this.state.displayTab && this.state.displayTab === 'video' &&
+                    <iframe style={{backgroundColor: 'black'}} id="ytplayer" type="text/html" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/dfnCAmr569k?autoplay=1&origin=http://example.com"
+                      frameBorder="0">
+                    </iframe>
                   }
-                </span>
+                </Modal>
               </div>
             }
           </MediaQuery>

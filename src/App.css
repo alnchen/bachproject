@@ -55,15 +55,17 @@ table {
 #trips {
   width: 45vw;
   height: 45vw;
+  margin-left: 3px;
+  margin-bottom: 10px;
 }
 
 #photos {
-  width: 40vw;
-  height: 40vw;
+  width: 38vw;
+  height: 38vw;
 }
 
 #equals {
-  width: 20vw;
+  width: 16vw;
   font-size: 20vw;
   color: white;
   text-align: center;
@@ -74,17 +76,42 @@ table {
 
 #midsection {
   display: flex;
-  align-content: space-around;
+  align-content: space-between;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 #header {
-  height: 20vh;
+  height: 23vh;
   display: flex;
   justify-content: center;
-  margin-bottom: 28px;
-  margin-top: 23px;
+  align-content: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 #header-image {
   height: 100%;
+}
+
+#equals-hidden {
+  opacity: 0;
+  width: 16vw;
+  font-size: 20vw;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+
+
+#photos-hidden {
+  opacity: 0;  
+  width: 38vw;
+  height: 38vw;
+}
+
+.click-animation:active {
+  opacity: 0.5;
 }
