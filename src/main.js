@@ -26,9 +26,9 @@ export default class Main extends React.Component {
     }
 
     askForPassword() {
-      const answer = prompt("What's the passcode?", "idk");
+      const answer = prompt("What is Jon's favorite Pokemon?", "idk");
 
-      if (answer === '123') {
+      if (answer === 'scyther') {
         this.setState({
           pageUnlocked: true
         })
