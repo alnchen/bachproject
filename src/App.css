@@ -86,7 +86,7 @@ table {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   margin-top: 15px;
 }
 
@@ -123,4 +123,31 @@ table {
 #schedule-photo-container {
   overflow: scroll;
   height: 100%;
+}
+
+#locations {
+  width: 45vw;
+  height: 45vw;
+  margin-left: 5vw;
+}
+
+#toronto-photo {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#photos-container {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  /* display: flex; */
+  /* align-content: center;
+  justify-content: center; */
+}
+
+#photo-text {
+  color: grey;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 18px;
 }

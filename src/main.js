@@ -39,9 +39,22 @@ export default class Main extends React.Component {
     }
 
     expandSection(section) {
-      this.setState({
-        displayTab: section
-      })
+      if (section === 'video') {
+        const dateNow = new Date();
+        const unlockedDate = new Date(2019, 6, 9);
+
+        if (unlockedDate < dateNow) {
+          this.setState({
+            displayTab: section
+          })
+        } else {
+          alert('LOCKED until 7/9');
+        }
+      } else {
+        this.setState({
+          displayTab: section
+        })
+      }
     }
 
     closeModal() {
@@ -83,7 +96,10 @@ export default class Main extends React.Component {
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
-                  PHOTOS HERE
+                  <div id="photos-container">
+                    <img id="toronto-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562050417/jon_bache/toronto.jpg" />
+                    <div id="photo-text">Photos will be added after the trip</div>
+                  </div>
                 </Modal>
 
                 <Modal 
@@ -97,18 +113,28 @@ export default class Main extends React.Component {
                 </Modal>
 
                 <Modal 
+                  visible={this.state.displayTab && this.state.displayTab === 'endgame'}
+                  width="90%"
+                  height="70%"
+                  effect="fadeInUp"
+                  onClickAway={() => this.closeModal()}
+                >
+                  {this.state.displayTab && this.state.displayTab === 'endgame' &&
+                    <iframe style={{backgroundColor: 'black'}} id="ytplayer" type="text/html" width="100%" height="100%"
+                      src="https://www.youtube.com/embed/dfnCAmr569k?autoplay=1&origin=http://example.com"
+                      frameBorder="0">
+                    </iframe>
+                  }
+                </Modal>
+
+                <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'video'}
                   width="90%"
                   height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
-                  {this.state.displayTab && this.state.displayTab === 'video' &&
-                    <iframe style={{backgroundColor: 'black'}} id="ytplayer" type="text/html" width="100%" height="100%"
-                      src="https://www.youtube.com/embed/dfnCAmr569k?autoplay=1&origin=http://example.com"
-                      frameBorder="0">
-                    </iframe>
-                  }
+                  OTHER HERE
                 </Modal>
               </div>
             }
