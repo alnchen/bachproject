@@ -71,7 +71,9 @@ export default class Main extends React.Component {
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
-                  SCHEDULE HERE
+                  <div id="schedule-photo-container">
+                    <img id="schedule-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562046398/jon_bache/Screen_Shot_2019-07-01_at_10.47.23_PM.png" />
+                  </div>
                 </Modal>
 
                 <Modal 

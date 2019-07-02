@@ -115,3 +115,12 @@ table {
 .click-animation:active {
   opacity: 0.5;
 }
+
+#schedule-photo {
+  width: 100%;
+}
+
+#schedule-photo-container {
+  overflow: scroll;
+  height: 100%;
+}
