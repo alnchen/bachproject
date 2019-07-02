@@ -85,7 +85,7 @@ export default class Main extends React.Component {
                   onClickAway={() => this.closeModal()}
                 >
                   <div id="schedule-photo-container">
-                    <img id="schedule-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562046398/jon_bache/Screen_Shot_2019-07-01_at_10.47.23_PM.png" />
+                    <img id="schedule-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562052080/jon_bache/sched.png" />
                   </div>
                 </Modal>
 
