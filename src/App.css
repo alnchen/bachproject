@@ -151,3 +151,9 @@ table {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 18px;
 }
+
+.lock-scroll {
+  position: fixed; 
+  overflow-y: scroll;
+  top: 0; right: 0; bottom: 0; left: 0;
+}

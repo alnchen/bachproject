@@ -65,9 +65,9 @@ export default class Main extends React.Component {
   
     render() {
       const { pageUnlocked, displayTab } = this.state;
-
+      const mainClasses = displayTab !== null ? 'lock-scroll' : '';
       return (
-        <div>
+        <div className={mainClasses}>
           <div id="header"><img id="header-image" src="https://res.cloudinary.com/ac31624/image/upload/c_limit,h_567,w_1572/v1562033102/jon_bache/vegas_sign.png" /></div>
           <MediaQuery minDeviceWidth={1224}>
             desktop mode
