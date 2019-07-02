@@ -66,8 +66,8 @@ export default class Main extends React.Component {
 
                 <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'schedule'}
-                  width="100%"
-                  height="80%"
+                  width="90%"
+                  height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
@@ -76,8 +76,8 @@ export default class Main extends React.Component {
 
                 <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'photos'}
-                  width="100%"
-                  height="80%"
+                  width="90%"
+                  height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
@@ -86,8 +86,8 @@ export default class Main extends React.Component {
 
                 <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'other'}
-                  width="100%"
-                  height="80%"
+                  width="90%"
+                  height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
@@ -96,8 +96,8 @@ export default class Main extends React.Component {
 
                 <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'video'}
-                  width="100%"
-                  height="80%"
+                  width="90%"
+                  height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
