@@ -123,6 +123,7 @@ table {
 #schedule-photo-container {
   overflow: scroll;
   height: 100%;
+  background-color: black;
 }
 
 #locations {

@@ -39,22 +39,9 @@ export default class Main extends React.Component {
     }
 
     expandSection(section) {
-      if (section === 'video') {
-        const dateNow = new Date();
-        const unlockedDate = new Date(2019, 6, 9);
-
-        if (unlockedDate < dateNow) {
-          this.setState({
-            displayTab: section
-          })
-        } else {
-          alert('LOCKED until 7/9');
-        }
-      } else {
-        this.setState({
-          displayTab: section
-        })
-      }
+      this.setState({
+        displayTab: section
+      })
     }
 
     closeModal() {
@@ -85,7 +72,7 @@ export default class Main extends React.Component {
                   onClickAway={() => this.closeModal()}
                 >
                   <div id="schedule-photo-container">
-                    <img id="schedule-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562052080/jon_bache/sched.png" />
+                    {/* <img id="schedule-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562052080/jon_bache/sched.png" /> */}
                   </div>
                 </Modal>
 
@@ -129,12 +116,18 @@ export default class Main extends React.Component {
 
                 <Modal 
                   visible={this.state.displayTab && this.state.displayTab === 'video'}
-                  width="90%"
+                  width="100%"
                   height="70%"
                   effect="fadeInUp"
                   onClickAway={() => this.closeModal()}
                 >
-                  OTHER HERE
+                  {this.state.displayTab && this.state.displayTab === 'video' &&
+                    <iframe 
+                      src="https://drive.google.com/file/d/1UDJkOgfPsmpHXNkcIfOlu5SVuiT2R0U_/preview" 
+                      width="100%" 
+                      height="100%">
+                    </iframe>
+                  }
                 </Modal>
               </div>
             }
