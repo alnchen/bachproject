@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Controls from './controls';
+import Photos from './photos';
 import MediaQuery from 'react-responsive';
 import Modal from 'react-awesome-modal';
 
@@ -57,7 +58,7 @@ export default class Main extends React.Component {
         <div className={mainClasses}>
           <div id="header"><img id="header-image" src="https://res.cloudinary.com/ac31624/image/upload/c_limit,h_567,w_1572/v1562033102/jon_bache/vegas_sign.png" /></div>
           <MediaQuery minDeviceWidth={1224}>
-            desktop mode
+            <div className="desktop-message">Please visit on a mobile device to see content</div>
           </MediaQuery>
           <MediaQuery maxDeviceWidth={1224}>
             {pageUnlocked && 
@@ -84,8 +85,7 @@ export default class Main extends React.Component {
                   onClickAway={() => this.closeModal()}
                 >
                   <div id="photos-container">
-                    <img id="toronto-photo" src="https://res.cloudinary.com/ac31624/image/upload/v1562050417/jon_bache/toronto.jpg" />
-                    <div id="photo-text">Photos will be added after the trip</div>
+                    <Photos />
                   </div>
                 </Modal>
 
